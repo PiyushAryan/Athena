@@ -1,40 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Athena - Decentralized Cloud Storage
+
+Athena is a decentralized cloud storage solution that leverages React.js and Ether.js frameworks. Built on blockchain technology, Athena provides a secure, transparent, and decentralized storage platform for digital assets.
+
+## Features
+
+- **Decentralized Architecture:** Utilizes blockchain technology to distribute data across a network of nodes, ensuring data integrity, security, and availability without a central server.
+
+- **User-Friendly Interface:** Crafted with React.js, the interface offers an intuitive and seamless experience for uploading, downloading, and managing files in a decentralized environment.
+
+- **Smart Contracts with Ether.js:** Manages transactions and interactions using smart contracts, with Ether.js facilitating integration with the Ethereum blockchain.
+
+- **End-to-End Encryption:** Prioritizes data security with end-to-end encryption, allowing only authorized users to access their stored files.
+
+- **Immutable Data:** Stored data becomes tamper-proof and immutable, providing a reliable and trustworthy storage solution.
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/piyusharyan/athena.git
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
