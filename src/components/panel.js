@@ -14,7 +14,7 @@ const panel = () => {
 
   return (
     <div className={`flex items-center justify-center h-screen transition-transform ${loaded ? 'translate-x-0' : '-translate-x-full'}`}>
-      <h1 className="font-sans text-5xl text-teal-700 pl-10 pb-10 font-black text-left">Empower Your Data, Unleash
+      <h1 className="font-sans-serif text-5xl text-teal-700 pl-10 pb-10 font-black text-left">Empower Your Data, Unleash
         <br />
         <span className="text-6xl text-start text-red-500">A</span>
         <span className="text-6xl text-start text-yellow-600">th</span>
