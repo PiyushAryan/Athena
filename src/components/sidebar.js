@@ -14,12 +14,8 @@ function Sidebar() {
 
     return (
         <div className="h-screen w-1/3 bg-teal-500 ml-auto">
-            <img
-                src="cloud1.svg"
-                className={`pt-40 transition-transform ${animate ? "translate-y-0" : "translate-y-full"
-                    }`}
-                alt="Cloud"
-            />
+            <img src="cloud1.svg" className={`pt-40 transition-transform ${animate ? "translate-y-0" : "translate-y-full" }`}
+                alt="Cloud" />
         </div>
     );
 }
