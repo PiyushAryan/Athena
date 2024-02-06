@@ -21,7 +21,7 @@ Athena is a decentralized cloud storage solution that leverages React.js and Eth
 - Ether.js
 - Solidity
 - Hardhat Development Tool
-  ## Other Information
+## Other Information
 - Metamask Wallet
 - Ethereum-based Blockchain
 
