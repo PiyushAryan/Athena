@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import _app from '@/pages/_app';
 
 const Panel = () => {
   const [loaded, setLoaded] = useState(false);
@@ -30,11 +31,10 @@ const Panel = () => {
           dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2'> <img src='metamask.svg' alt='metamask' className='w-6 h-5 me-2 ms-1 aria-hidden:' /> Connect with MetaMask
         </button>
         </h1>
-      
+
     </div>
-    
-    
   );
+  
 };
 
 export default Panel
