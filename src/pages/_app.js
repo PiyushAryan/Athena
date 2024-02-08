@@ -4,6 +4,7 @@ import { ethers } from "ethers";
 import FileUpload from "@/components/FileUpload";
 import Display from "@/components/Display";
 import Modal from "@/components/Modal";
+import Footer from "@/components/footer";
 import "@/styles/globals.css";
 import Link from "next/link";
 
@@ -38,6 +39,10 @@ export default function App({ Component, pageProps }) {
     provider && loadProvider()
   },[]);
 
-  return <Component {...pageProps} />;
-          
+  return (
+    <>
+      <Component {...pageProps} />
+      <Footer account={account} />
+    </>
+  );     
 }
