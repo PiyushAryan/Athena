@@ -4,7 +4,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 
 const nav = [
-  { name: 'Home', to: '#', current: true },
+  { name: 'Home', href: '#', current: true },
   { name: 'Upload', href: '/upload', current: false },
   { name: 'Download', href: '/download', current: false },
   { name: 'About', href: '/about', current: false },
