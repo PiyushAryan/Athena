@@ -6,6 +6,8 @@ import Display from "@/components/Display";
 import Modal from "@/components/Modal";
 import "@/styles/globals.css";
 import Link from "next/link";
+import Footer from "@/components/footer";
+
 
 export default function App({ Component, pageProps }) {
   const [account, setAccount] = useState("");
@@ -38,6 +40,10 @@ export default function App({ Component, pageProps }) {
     provider && loadProvider()
   },[]);
 
-  return <Component {...pageProps} />;
-          
+  return (
+    <>
+      <Component {...pageProps} />
+      <Footer account={account} /> {/* Include Footer component */}
+    </>
+  );      
 }
