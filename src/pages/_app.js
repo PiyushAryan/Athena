@@ -6,8 +6,6 @@ import Display from "@/components/Display";
 import Modal from "@/components/Modal";
 import "@/styles/globals.css";
 import Link from "next/link";
-import Footer from "@/components/footer";
-
 
 export default function App({ Component, pageProps }) {
   const [account, setAccount] = useState("");
@@ -27,13 +25,11 @@ export default function App({ Component, pageProps }) {
         let contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 
         const contract = new ethers.Contract(
-          contractAddress,
-          Upload.abi,
-          signer
-        );
+          contractAddress,Upload.abi,signer
+        )
         console.log(contract);
-        setContract(contract);
-        setProvider(provider);
+        setContract(contract)
+        setProvider(provider)
       }
         else {
         console.error("Metamask is not present in your arsenal");
@@ -42,12 +38,6 @@ export default function App({ Component, pageProps }) {
     provider && loadProvider()
   },[]);
 
-  return (
-    <>
-    <Component {...pageProps} />
-    <Footer account={account} /> 
-  </>
-  
-  );
-
+  return <Component {...pageProps} />;
+          
 }
