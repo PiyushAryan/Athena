@@ -43,7 +43,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Component {...pageProps} />
-      <Footer account={account} /> {/* Include Footer component */}
+      <Footer account={account} />
     </>
   );      
 }
