@@ -14,9 +14,19 @@ Athena is a decentralized cloud storage solution that leverages React.js and Eth
 
 - **Immutable Data:** Stored data becomes tamper-proof and immutable, providing a reliable and trustworthy storage solution.
 
+## Tech Stack Used
+
+- Next.js
+- Tailwind CSS
+- Ether.js
+- Solidity
+- Hardhat Development Tool
+## Other Information
+- Metamask Wallet
+- Ethereum-based Blockchain
+
 ## Getting Started
 
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/piyusharyan/athena.git
-
