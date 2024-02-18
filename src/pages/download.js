@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
+import {
+  TextRevealCard,
+  TextRevealCardDescription,
+  TextRevealCardTitle,
+} from "@/components/ui/text-reveal-card.js";
 
-const download = () => {
+export default function TextRevealCardPreview() {
   return (
-    <div>download</div>
-  )
+    <div className="flex items-center justify-center bg-[#0E0E10] h-[40rem] rounded-2xl w-full">
+    <TextRevealCard
+      text="Empower Your Data, Unleash"
+        revealText="Athena"
+        >
+        </TextRevealCard>
+    </div>
+  );
 }
-
-export default download
