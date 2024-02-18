@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, memo } from "react";
+import React, { useRef, useState, useEffect, memo } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { cn } from "@/utils/cn";
@@ -49,7 +49,7 @@ export const TextRevealCard = ({
       onMouseMove={mouseMoveHandler}
       ref={cardRef}
       className={cn(
-        "bg-[#ffff] w-[40rem] rounded-lg p-8 relative overflow-hidden",
+        "bg-[#ffff] border border-white/[0.08] w-[40rem] rounded-lg p-8 relative overflow-hidden",
         className
       )}
     >
@@ -63,23 +63,24 @@ export const TextRevealCard = ({
           animate={
             isMouseOver
               ? {
-                  opacity: widthPercentage > 0 ? 1 : 0,
-                  clipPath: `inset(0 ${100 - widthPercentage}% 0 0)`,
-                }
+                opacity: widthPercentage > 0 ? 1 : 0,
+                clipPath: `inset(0 ${100 - widthPercentage}% 0 0)`,
+              }
               : {
-                  clipPath: `inset(0 ${100 - widthPercentage}% 0 0)`,
-                }
+                clipPath: `inset(0 ${100 - widthPercentage}% 0 0)`,
+              }
           }
           transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-          className="absolute bg-[#ffff] z-20  will-change-transform"
-        >
+          className="absolute bg-[#ffff] z-20  will-change-transform">
           <p
             style={{
               textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
             }}
-            className="text-6xl py-10 text-transparent bg-gradient-to-r from-red-500 via-blue-500 to-yellow-500 ... bg-clip-text">
+            className="text-6xl sm:text-[3rem] py-10 font-bold bg-clip-text text-transparent bg-gradient-to-l from-red-500 via-blue-500 to-yellow-500"
+          >
             {revealText}
           </p>
+
         </motion.div>
         <motion.div
           animate={{
@@ -92,7 +93,7 @@ export const TextRevealCard = ({
         ></motion.div>
 
         <div className=" overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
-          <p className="text-6xl py-12 bg-clip-text text-teal-700">
+          <p className="text-6xl sm:text-[3rem] py-10 font-bold bg-clip-text text-transparent bg-teal-700">
             {text}
           </p>
           <MemoizedStars />
@@ -118,7 +119,7 @@ export const TextRevealCardDescription = ({
   className,
 }) => {
   return (
-    <p className={twMerge("text-[#0f766dac] text-sm", className)}>{children}</p>
+    <p className={twMerge("text-[#a9a9a9] text-sm", className)}>{children}</p>
   );
 };
 
