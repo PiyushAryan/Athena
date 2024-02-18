@@ -42,13 +42,13 @@ export default function Example() {
                   /></Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-4 font-Montserrat">
                     {nav.map((item) => (
                       <Link
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-teal-900 text-white' : 'text-teal-800 hover:bg-teal-700 hover:text-white',
+                          item.current ? 'bg-teal-900 font-Montserrat text-white' : 'text-teal-800 hover:bg-teal-700 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}>
