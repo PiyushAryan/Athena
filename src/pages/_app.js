@@ -7,6 +7,8 @@ import Modal from "@/components/Modal";
 import "@/styles/globals.css";
 import Link from "next/link";
 import Footer from "@/components/footer";
+import Navbar from "@/components/Navbar";
+
 
 
 export default function App({ Component, pageProps }) {
@@ -42,8 +44,11 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+      <Navbar />
       <Component {...pageProps} />
       <Footer account={account} />
+      
+
     </>
   );      
 }

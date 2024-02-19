@@ -2,7 +2,7 @@ import React from 'react'
 
 function download() {
   return (
-    <div>download</div>
+    <div>contact</div>
   )
 }
 
