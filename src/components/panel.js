@@ -4,7 +4,8 @@ import {
   TextRevealCard,
   TextRevealCardDescription,
   TextRevealCardTitle,
-} from "@/components/ui/text-reveal-card.js";
+} from "./ui/text-reveal-card";
+import Button from './ui/moving-border';
 
 
 function Panel() {
@@ -19,7 +20,20 @@ function Panel() {
         <p className="text-sm ml-10 text-justify font-Inter bg-gradient-to-l from-red-500 via-blue-600 to-yellow-700 text-transparent bg-clip-text max-w-[50vw]"> Athena offers decentralized cloud storage powered by Web3, ensuring security, privacy, and accessibility. Data is distributed across a network, eliminating reliance on centralized servers. With end-to-end encryption and community governance, users retain control over their data. Experience Athena for secure, decentralized storage solutions in the Web3 era.</p>
         <br />
       </div>
+      <Link href="/FileUpload">
+      <Button
+        borderRadius="1.75rem"
+        className="bg-black text-white hover:bg-blue-200 hover:text-teal-950 hover:font-extrabold border-teal-900 font-Inter">
+        Upload
+      </Button>
+      </Link>
+      <Button
+        borderRadius="1.75rem"
+        className="bg-slate-900 text-white hover:text-teal-950 hover:font-extrabold hover:bg-white border-teal-800 font-Inter">
+        Download
+      </Button>
     </div>
+      
     </>
   );
 }
