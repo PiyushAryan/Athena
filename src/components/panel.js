@@ -32,14 +32,15 @@ function Panel() {
               </h1>
 
               <p className="font-normal text-base text-slate-500 mb-4 relative z-50">
-              <img src="/upload.png" width={100} height={100} alt="upload"  className='font-Inter  bg-transparent shadow-lg ml-14'/>
-                
+                <img src="/upload.png" width={100} height={100} alt="upload" className='font-Inter  bg-transparent shadow-lg ml-14' />
+
                 Choose a file to upload to the Athena network
               </p>
-
-              <button className="border mx-12 px-5 hover:bg-slate-400 hover:text-teal- py-1 rounded-lg font-Montserrat border-gray-500 text-gray-300">
-                Upload file
-              </button>
+              <Link href="/FileUpload">
+                <button className="border mx-12 px-5 hover:bg-slate-400 hover:text-teal- py-1 rounded-lg font-Montserrat border-gray-500 text-gray-300">
+                  Upload file
+                </button>
+              </Link>
 
               {/* Meaty part - Meteor effect */}
               <Meteors number={30} />

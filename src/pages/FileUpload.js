@@ -1,9 +1,5 @@
 import { useState } from "react";
 import axios from "axios";
-import { ethers } from "ethers";
-import Upload from "../artifacts/contracts/Upload.sol/Upload.json";
-
-
 
 const FileUpload = ({ contract, account, provider }) => {
   const [file, setFile] = useState(null);
@@ -53,8 +49,8 @@ const FileUpload = ({ contract, account, provider }) => {
     e.preventDefault();
   };
   return (
-    <div className="top">
-      <form className="form" onSubmit={handleSubmit}>
+    <div>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="file-upload">
           Choose Image
         </label>

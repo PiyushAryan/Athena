@@ -11,6 +11,10 @@ const ContactForm = () => {
   };
 
   return (
+    <div className="h-auto md:h-[40rem] w-full rounded-md flex flex-col items-center justify-center relative overflow-hidden">
+    <h1 className="font-bold text-4xl font-Montserrat text-violet-950 text-transparent mb-4 relative z-50">Contact Us</h1>
+    <p className="font-normal text-base text-slate-500 mb-4 relative z-50"></p>
+      <img src="/profile.jpg" width={100} height={100} alt="contact"  className='font-Inter  bg-transparent shadow-lg ml-14'/>
     <form onSubmit={handleSubmit}>
       <input
         type="text"
@@ -34,6 +38,7 @@ const ContactForm = () => {
       />
       <button type="submit">Send</button>
     </form>
+    </div>
   );
 };
 
