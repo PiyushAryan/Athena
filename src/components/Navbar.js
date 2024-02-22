@@ -10,7 +10,7 @@ function Navbar({ className }) {
     <div className={cn("fixed top-10 inset-x-1 max-w-2xl mx-auto z-50 font-Montserrat", className)}>
       <Menu setActive={setActive}>
       <Link href="/">
-        <Image src="/athena-logo.svg" alt="Logo" width={80} height={80} />
+        <Image src="/athena-logo.svg" alt="Logo" width={100} height={100} />
         </Link>
         <Link href="/">
           <MenuItem setActive={setActive} active={active} item="Home"></MenuItem>

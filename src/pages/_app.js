@@ -1,7 +1,7 @@
-import Upload from "@/artifacts/contracts/Upload.sol/Upload.json";
+import Upload from "../artifacts/contracts/Upload.sol/Upload.json";
 import { useEffect,useState } from "react";
 import { ethers } from "ethers";
-import FileUpload from "@/pages/FileUpload";
+import FileUpload from "@/components/FileUpload";
 import Display from "@/components/Display";
 import Modal from "@/components/Modal";
 import "@/styles/globals.css";
@@ -46,9 +46,8 @@ export default function App({ Component, pageProps }) {
     <>
       <Navbar />
       <Component {...pageProps} />
-      <Footer account={account} />
-      
-
+      <FileUpload account={account} contract={contract} provider={provider} />
+      <Footer account={account}/>
     </>
   );      
 }
