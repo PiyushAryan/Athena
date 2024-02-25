@@ -49,8 +49,9 @@ const FileUpload = ({ contract, account, provider }) => {
     e.preventDefault();
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+  // <div className="relative bg-gradient-to-r from-red-500 to-blue-500 transform scale-[0.80] bg-teal-500 rounded-full blur-3xl">
+    <div className="h-auto md:h-[42rem] w-full rounded-md flex flex-col items-center justify-center relative overflow-hidden mx-auto p-14">
+      <form onSubmit={handleSubmit} className="relative z-5">
         <label htmlFor="file-upload">
           Choose Image
         </label>
@@ -62,11 +63,13 @@ const FileUpload = ({ contract, account, provider }) => {
           onChange={retrieveFile}
         />
         <span>Image: {fileName}</span>
-        <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" disabled={!file}>
+        <button type="submit" className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded" disabled={!file}>
           Upload File
         </button>
       </form>
     </div>
+  // </div>
+
   );
 };
 export default FileUpload;
