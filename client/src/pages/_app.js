@@ -1,7 +1,7 @@
 import Upload from "../artifacts/contracts/Upload.sol/Upload.json";
 import { useEffect, useState } from "react";
 import { ethers } from "ethers";
-import FileUpload from "@/pages/FileUpload";
+import FileUploadComp from "@/pages/FileUploadComp";
 import Display from "@/components/Display";
 import Modal from "@/components/Modal";
 import "@/styles/globals.css";
