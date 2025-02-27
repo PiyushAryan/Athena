@@ -6,6 +6,7 @@ import {
   TextRevealCardTitle,
 } from "./ui/text-reveal-card";
 import { Meteors } from "./ui/meteors";
+import { FileUpload } from "@/components/ui/file-upload";
 
 
 function Panel() {
