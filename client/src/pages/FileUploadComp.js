@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { FileUpload, GridPattern } from "@/components/ui/file-upload";
+import { FileUpload } from "@/components/ui/file-upload";
 
 const FileUploadComp = ({ contract, account }) => {
   const [file, setFile] = useState(null);

@@ -37,7 +37,7 @@ function Panel() {
 
                 Choose a file to upload to the Athena network
               </p>
-              <Link href="/FileUpload">
+              <Link href="/FileUploadComp">
                 <button className="border mx-12 px-5 hover:bg-slate-400 hover:text-teal- py-1 rounded-lg font-Montserrat border-gray-500 text-gray-300">
                   Upload file
                 </button>
