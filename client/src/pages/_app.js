@@ -1,7 +1,6 @@
 import Upload from "@/abi/Upload.json";
 import { useEffect, useState } from "react";
 import { ethers } from "ethers";
-
 import FileUploadComp from "@/pages/FileUploadComp";
 import Display from "@/components/Display";
 import Modal from "@/components/Modal";
@@ -31,7 +30,7 @@ export default function App({ Component, pageProps }) {
           const address = await signer.getAddress();
           setAccount(address);
 
-          const contractAddress = "0xB28E851A8941Cd1419813DA449eD7Ed32134b991";
+          const contractAddress = "0x3bd77D528CC094d6d8310aa6a522E3Edc5Ed4872";
           const contract = new ethers.Contract(contractAddress, Upload.abi, signer);
           console.log("Contract loaded:", contract);
           setContract(contract);
