@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }) {
         const signer = provider.getSigner();
         const address = await signer.getAddress();
         setAccount(address);
-        let contractAddress = "0xF4e27352480eFEB8D493D7b3faA6525aE43D10b7";
+        let contractAddress = "0xB28E851A8941Cd1419813DA449eD7Ed32134b991";
 
         const contract = new ethers.Contract(
           contractAddress, Upload.abi, signer
