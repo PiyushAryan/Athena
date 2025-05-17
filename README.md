@@ -10,16 +10,18 @@ Athena is a decentralized cloud storage solution that leverages **React.js** and
 - **Immutable Data:** Tamper-proof storage for reliable data integrity.
 
 ## Tech Stack
-- **Frontend:** Next.js, Tailwind CSS  
-- **Blockchain:** Ether.js, Solidity  
-- **Development Tools:** Hardhat, Pinata (for IPFS)  
-- **Other Requirements:** Metamask Wallet, Ethereum-based Blockchain  
+- **Frontend:** Next.js @13, Tailwind CSS  
+- **Blockchain:** Ether.js @5, Solidity  
+- **Development Tools:** Hardhat, Pinata (for IPFS)
+- **Other Requirements:** Metamask Wallet, Ethereum-based Blockchain
 
 ---
 
 ## Smart Contract Development with Hardhat
 
-This project includes a **Hardhat** setup for deploying Ethereum smart contracts.  
+This project includes a **Hardhat** in the local setup for deploying Ethereum smart contracts. 
+
+Production: **use Sepolia Testnet Faucet** and Remix IDE for deployment
 
 ### Getting Started
 
