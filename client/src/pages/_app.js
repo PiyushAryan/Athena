@@ -1,4 +1,4 @@
-import Upload from "../artifacts/contracts/Upload.sol/Upload.json";
+import Upload from "@/abi/Upload.json";
 import { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import FileUploadComp from "@/pages/FileUploadComp";
