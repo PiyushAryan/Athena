@@ -1,6 +1,7 @@
 import Upload from "@/abi/Upload.json";
 import { useEffect, useState } from "react";
 import { ethers } from "ethers";
+
 import FileUploadComp from "@/pages/FileUploadComp";
 import Display from "@/components/Display";
 import Modal from "@/components/Modal";
@@ -17,10 +18,10 @@ export default function App({ Component, pageProps }) {
   const [provider, setProvider] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
 
-  
+
   useEffect(() => {
-    // Run only on client side and if MetaMask is installed
-    if (typeof window !== "undefined" && window.ethereum) {
+  if (typeof window !== "undefined" && window.ethereum) {
+    import("ethers").then(({ ethers }) => {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
 
       const loadProvider = async () => {
@@ -31,7 +32,6 @@ export default function App({ Component, pageProps }) {
           setAccount(address);
 
           const contractAddress = "0xB28E851A8941Cd1419813DA449eD7Ed32134b991";
-
           const contract = new ethers.Contract(contractAddress, Upload.abi, signer);
           console.log("Contract loaded:", contract);
           setContract(contract);
@@ -42,10 +42,11 @@ export default function App({ Component, pageProps }) {
       };
 
       loadProvider();
-    } else {
-      console.error("MetaMask not found or window.ethereum is undefined");
-    }
-  }, []);
+    });
+  } else {
+    console.error("MetaMask not found or window.ethereum is undefined");
+  }
+}, []);
 
   return (
     <>
