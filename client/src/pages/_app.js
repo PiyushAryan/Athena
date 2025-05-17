@@ -17,29 +17,34 @@ export default function App({ Component, pageProps }) {
   const [provider, setProvider] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
 
+  
   useEffect(() => {
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    // Run only on client side and if MetaMask is installed
+    if (typeof window !== "undefined" && window.ethereum) {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
 
-    const loadProvider = async () => {
-      if (provider) {
-        await provider.send("eth_requestAccounts", []);
-        const signer = provider.getSigner();
-        const address = await signer.getAddress();
-        setAccount(address);
-        let contractAddress = "0xB28E851A8941Cd1419813DA449eD7Ed32134b991";
+      const loadProvider = async () => {
+        try {
+          await provider.send("eth_requestAccounts", []);
+          const signer = provider.getSigner();
+          const address = await signer.getAddress();
+          setAccount(address);
 
-        const contract = new ethers.Contract(
-          contractAddress, Upload.abi, signer
-        )
-        console.log(contract);
-        setContract(contract)
-        setProvider(provider)
-      }
-      else {
-        console.error("Metamask is not present in your arsenal");
-      }
-    };
-    provider && loadProvider()
+          const contractAddress = "0xB28E851A8941Cd1419813DA449eD7Ed32134b991";
+
+          const contract = new ethers.Contract(contractAddress, Upload.abi, signer);
+          console.log("Contract loaded:", contract);
+          setContract(contract);
+          setProvider(provider);
+        } catch (err) {
+          console.error("Error connecting to MetaMask:", err);
+        }
+      };
+
+      loadProvider();
+    } else {
+      console.error("MetaMask not found or window.ethereum is undefined");
+    }
   }, []);
 
   return (
