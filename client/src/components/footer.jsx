@@ -3,6 +3,7 @@ import Upload from "@/abi/Upload.json";
 
 const Footer = ({ account, setAccount, setContract, setProvider }) => {
   const connectWallet = async () => {
+    console.log("Connect Wallet button clicked");
     if (typeof window !== "undefined" && window.ethereum) {
       try {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
