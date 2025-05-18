@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { CircleX } from 'lucide-react';
 
-function WelcomeModal({ onClose }) {
+function WelcomeModal({ onClose, account }) {
 
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
-        onClick={onClose}>
+            onClick={onClose}>
             <div className="relative w-[480px] max-w-full bg-black rounded-lg p-6 text-slate-50 shadow-lg border border-gray-600">
 
 
@@ -40,8 +40,9 @@ function WelcomeModal({ onClose }) {
                         className="text-blue-400 underline font-medium hover:text-blue-300 transition"
                     >here</a>.
                 </p>
-            
-
+                <p className="mb-6">
+                    Your current MetaMask account: <span className={`${account ? "text-green-400" : "text-red-400"} font-medium`}>{account || "Not Connected"}</span>
+                </p>
             </div>
         </div>
 
