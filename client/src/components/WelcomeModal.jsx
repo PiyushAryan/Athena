@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import { CircleX } from 'lucide-react';
 
-function WelcomeModal({ onClose, account }) {
+function WelcomeModal({ onClose, account, isFading }) {
 
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
             onClick={onClose}>
-            <div className="relative w-[480px] max-w-full bg-black rounded-lg p-6 text-slate-50 shadow-lg border border-gray-600">
-
+            <div
+  className={`relative w-[480px] max-w-full bg-black rounded-lg p-6 text-slate-50 shadow-lg border border-gray-600 
+    transition-opacity duration-300 ease-in-out 
+    ${isFading ? 'opacity-0' : 'opacity-100'}`}
+>
 
                 <button
                     className="absolute top-4 right-4 text-gray-400 hover:text-white transition"
@@ -25,7 +28,7 @@ function WelcomeModal({ onClose, account }) {
                 </div>
 
                 <p className="font-Inter font-normal text-justify mb-4">
-                    This app requires the <span className="font-semibold hover:text-yellow-500 text-[#F89C35]"><a href='https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn'>MetaMask Wallet</a></span> to be installed browser. Please ensure you're connected to the <span className="font-semibold text-white">Ethereum Sepolia testnet</span> in MetaMask to access full functionality.
+                    This app requires the <span className="font-semibold hover:text-yellow-500 text-[#F89C35]"><a href='https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn'>MetaMask Wallet</a></span> to be installed in the browser. Please ensure you're connected to the <span className="font-semibold text-white">Ethereum Sepolia testnet</span> in MetaMask to access full functionality.
                 </p>
 
                 <div className="font-Inter font-normal text-justify text-sm text-gray-400 mb-6">

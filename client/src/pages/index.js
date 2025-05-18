@@ -6,13 +6,25 @@ import WelcomeModal from '@/components/WelcomeModal';
 
 
 
-const Home = ({account}) => {
+const Home = ({ account }) => {
   const [showModal, setShowModal] = useState(true);
+  const [isFading, setIsFading] = useState(false);
+
+  const handleClose = () => {
+    setIsFading(true);
+    setTimeout(() => {
+      setShowModal(false);
+      setIsFading(false);
+    }, 300);
+
+  };
+
+
   return (
     <div className="relative">
-      {showModal && <WelcomeModal account={account} onClose={() => setShowModal(false)} />}
+      {showModal && <WelcomeModal isFading={isFading} account={account} onClose={handleClose} />}
 
-      <div className={`flex bg-black min-h-screen transition duration-300 ${showModal ? 'blur-sm' : ''}`}>
+      <div className={`flex bg-black min-h-screen duration-300 ${!isFading && showModal ? 'blur-sm' : ''}`}>
         <Panel />
       </div>
     </div>

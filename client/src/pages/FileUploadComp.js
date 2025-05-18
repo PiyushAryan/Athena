@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { FileUpload } from "@/components/ui/file-upload";
+import { FileUpload, GridPattern } from "@/components/ui/file-upload";
 
 const FileUploadComp = ({ contract, account }) => {
   const [file, setFile] = useState(null);
@@ -57,18 +57,24 @@ const FileUploadComp = ({ contract, account }) => {
   };
 
   return (
-    <div className="bg-white bg-opacity-90 h-auto md:h-[42rem] w-full max-w-4xl min-h-96 rounded-md flex flex-col items-center justify-center relative overflow-hidden mx-auto p-14">
-      <form onSubmit={handleSubmit} className="relative z-5 flex flex-col items-center space-y-4">
-        <FileUpload onChange={retrieveFile} />
-        <span>Image: {fileName}</span>
-        <button
-          type="submit"
-          className="bg-black hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-full disabled:opacity-50"
-          disabled={!file || !account}
-        >
-          Upload
-        </button>
-      </form>
+    <div className="relative min-h-screen flex items-center justify-center">
+
+      <div className="absolute inset-0 bg-black opacity-100"></div>
+      <div className="bg-gradient-to-r from-slate-800 to-[#344EA2] h-auto md:h-[30rem] text-white w-full max-w-4xl min-h-96 rounded-md flex flex-col items-center justify-center relative overflow-hidden mx-auto p-6">
+        <form onSubmit={handleSubmit} className="relative z-5 flex flex-col items-center space-y-4">
+          <FileUpload onChange={retrieveFile} />
+          <button
+
+            type="submit"
+            className="bg-black hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-full disabled:opacity-50"
+            disabled={!file || !account}
+          >
+            Upload
+          </button>
+
+
+        </form>
+      </div>
     </div>
   );
 };
