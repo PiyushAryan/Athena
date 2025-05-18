@@ -55,10 +55,7 @@ export default function App({ Component, pageProps }) {
         contract={contract}
         provider={provider} />
       {/* <FileUpload account={account} contract={contract} provider={provider} /> */}
-      <Footer account={account}
-        setAccount={setAccount}
-        setContract={setContract}
-        setProvider={setProvider} />
+      <Footer account={account} />
     </>
   );
 }

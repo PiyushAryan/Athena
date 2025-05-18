@@ -1,6 +1,7 @@
 const Footer = ({ account }) => {
     return (
-        <footer className=" bg-gray-800 mx-auto my-auto p-10">
+        <footer className=" bg-black
+         mx-auto my-auto p-10">
             <p className="font-Montserrat text-xl text-white">
                 Metamask Account: {account ? account : "☹️ Please Connect Metamask wallet"}  
             </p>
