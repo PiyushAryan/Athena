@@ -5,7 +5,8 @@ function WelcomeModal({ onClose }) {
 
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+        onClick={onClose}>
             <div className="relative w-[480px] max-w-full bg-black rounded-lg p-6 text-slate-50 shadow-lg border border-gray-600">
 
 
@@ -39,7 +40,7 @@ function WelcomeModal({ onClose }) {
                         className="text-blue-400 underline font-medium hover:text-blue-300 transition"
                     >here</a>.
                 </p>
-
+            
 
             </div>
         </div>
