@@ -15,7 +15,7 @@ const Home = ({ account }) => {
     setTimeout(() => {
       setShowModal(false);
       setIsFading(false);
-    }, 300);
+    },300);
 
   };
 

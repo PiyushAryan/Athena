@@ -1,11 +1,7 @@
 import Upload from "@/abi/Upload.json";
 import { useEffect, useState } from "react";
-import { ethers } from "ethers";
-import FileUploadComp from "@/pages/FileUploadComp";
-import Display from "@/components/Display";
-import Modal from "@/components/Modal";
+import { Analytics } from '@vercel/analytics/next';
 import "@/styles/globals.css";
-import Link from "next/link";
 import Footer from "@/components/footer";
 import Navbar from "@/components/Navbar";
 
@@ -50,12 +46,15 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Navbar />
+      <Analytics />
       <Component {...pageProps}
         account={account}
         contract={contract}
         provider={provider} />
+
       {/* <FileUpload account={account} contract={contract} provider={provider} /> */}
       <Footer account={account} />
+
     </>
   );
 }
